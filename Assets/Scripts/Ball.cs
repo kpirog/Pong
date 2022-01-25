@@ -26,4 +26,12 @@ public class Ball : MonoBehaviour
     {
         _rigidbody.AddForce(direction);
     }
+
+    public void ResetPosition()
+    {
+        _rigidbody.transform.position = Vector2.zero;
+        _rigidbody.velocity = Vector2.zero;
+
+        AddRandomForce();
+    }
 }
