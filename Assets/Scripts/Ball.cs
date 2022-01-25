@@ -21,4 +21,9 @@ public class Ball : MonoBehaviour
         Vector2 forceDirection = new Vector2(x, y);
         _rigidbody.AddForce(forceDirection * _movementSpeed);
     }
+
+    public void AddForce(Vector2 direction)
+    {
+        _rigidbody.AddForce(direction);
+    }
 }
