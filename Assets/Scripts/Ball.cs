@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float _movementSpeed = 5.0f;
+    [SerializeField] private float _movementSpeed = 200.0f;
     
     private Rigidbody2D _rigidbody;
 
@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
 
     private void AddRandomForce()
     {
-        float x = Random.value < 0.5f ? UnityEngine.Random.Range(1.0f, -1.0f) : UnityEngine.Random.Range(-1.0f, 1.0f);
+        float x = Random.value < 0.5f ? UnityEngine.Random.Range(-1.0f, -0.5f) : UnityEngine.Random.Range(0.5f, 1.0f);
         float y = Random.value < 0.5f ? -1.0f : 1.0f;
 
         Vector2 forceDirection = new Vector2(x, y);
